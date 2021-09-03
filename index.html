@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <title>Интересная Европа: полезные факты для туристов</title>
+  </head>
+  <body>
+    <div class="header">
+      <button class="top" id="btn1">Интересные маршруты</button>
+      <button class="top" id="btn2">Транспорт</button>
+      <button class="top" id="btn3">Местные блюда</button>
+
+      <h1>Путешествуем по Европе</h1>
+    </div>
+
+    <p>
+      Прага, Мюнхен, Барселона и другие европейские мегаполисы манят своей
+      помпезностью, но знаете ли вы, что даже в самом туристическом городе можно
+      найти небанальные достопримечательности? В этом блоге вы найдете полезные
+      советы, которые сделают ваше путешествие по Европе еще более интересным,
+      чем вы могли представить. Я рассказываю только про свой опыт поездок по Европе.
+    </p>
+
+    <div class="slider">
+      <div class="slide"><img src="/prague.jpg" alt="Photo1" /></div>
+      <div class="slide"><img src="/budapest.jpg" alt="Photo2" /></div>
+      <div class="slide"><img src="/lisbon.jpg" alt="Photo3" /></div>
+
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
+    </div>
+
+    <p>
+      Главный секрет интересного путешествия: нужно наслаждаться каждым его мгновением!
+    </p>
+
+    <button class="read__more" id="maps">Посмотреть карту...</button>
+
+    <div class="blocks">
+      <div class="nav" id="nav1">
+        <h2>Интересные маршруты</h2>
+        <h3>
+          Будапешт,Вена, Брно и Краков - максимум впечатлений за 10 дней (синяя линия на карте)
+        </h3>
+
+        <p>
+          Четыре страны за 10 дней - возможно ли это? Конечно, если заранее продумать свой маршрут и не бояться провести 3-4 часа в автобусе. В Будапешт я прилетела из Киева и вместе с подругой мы провели здесь два отличных дня. Дорога в Вену из Брно заняла всего 3 часа на автобусе. К тому же, это была отличная возможность насладиться пейзажами за окном. Стоимость проезда (актуально на весну 2019 года) - 7 евро. Следующие два дня мы провели в Вене. Во второй день прошли 40 тысяч шагов - это до сих пор мой личный рекорд за сутки. Вечером второго дня из Вены мы поехали в Брно. Снова на автобусе и всего за полтора часа. От Брно мы не ждали чего-то особенного, но этот чешский городок смог удивить. Спустя несколько дней мы отправились в Краков. Это был самый долгий переезд - 5.5 часов на автобусе, но оно того стоило. В Кракове же нас ждала настоящая весна, с цветущими деревьями и красивым Вавельским замком.
+        </p>
+        
+        <h3>
+          Лучшие рождественские ярмарки Европы: путешествие в Нюрнберг, Мюнхен и
+          Прагу (красная линия на карте)
+
+        </h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+        sequi tempora earum ratione consequuntur obcaecati pariatur quas cumque,
+        rerum unde saepe quam quasi ipsam veniam accusantium? Excepturi tenetur
+        dolores adipisci. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dignissimos, sequi tempora earum ratione consequuntur obcaecati
+        pariatur quas cumque, rerum unde saepe quam quasi ipsam veniam
+        accusantium? Excepturi tenetur dolores adipisci. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Dignissimos, sequi tempora earum
+        ratione consequuntur obcaecati pariatur quas cumque, rerum unde saepe
+        quam quasi ipsam veniam accusantium? Excepturi tenetur dolores adipisci.
+          
+        <h3>Путешествие по Испании и Португалии (зеленая линия на карте)
+        </h3>
+          
+   
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+        sequi tempora earum ratione consequuntur obcaecati pariatur quas cumque,
+        rerum unde saepe quam quasi ipsam veniam accusantium? Excepturi tenetur
+        dolores adipisci. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dignissimos, sequi tempora earum ratione consequuntur obcaecati
+        pariatur quas cumque, rerum unde saepe quam quasi ipsam veniam
+        accusantium? Excepturi tenetur dolores adipisci. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Dignissimos, sequi tempora earum
+        ratione consequuntur obcaecati pariatur quas cumque, rerum unde saepe
+        quam quasi ipsam veniam accusantium? Excepturi tenetur dolores adipisci.
+
+        <div id="map" style="width: 1200px; height: 700px"></div>
+      </div>
+      <div class="nav" id="nav2">
+        <h2>Транспорт</h2>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id reiciendis
+        animi atque iusto vel voluptatibus, nihil est. Quidem, sit, amet
+        voluptatum illo laudantium provident incidunt temporibus officiis quod
+        deleniti cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Dignissimos, sequi tempora earum ratione consequuntur obcaecati
+        pariatur quas cumque, rerum unde saepe quam quasi ipsam veniam
+        accusantium? Excepturi tenetur dolores adipisci. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Dignissimos, sequi tempora earum
+        ratione consequuntur obcaecati pariatur quas cumque, rerum unde saepe
+        quam quasi ipsam veniam accusantium? Excepturi tenetur dolores adipisci.
+      </div>
+      <div class="nav" id="nav3">
+        <h2>Местные блюда</h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+        voluptatem minus aspernatur. Voluptatibus, nam? Amet veritatis delectus
+        laboriosam minus eos molestias earum soluta, excepturi fugiat
+        asperiores, facilis eius nemo nesciunt. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Dignissimos, sequi tempora earum ratione
+        consequuntur obcaecati pariatur quas cumque, rerum unde saepe quam quasi
+        ipsam veniam accusantium? Excepturi tenetur dolores adipisci. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sequi
+        tempora earum ratione consequuntur obcaecati pariatur quas cumque, rerum
+        unde saepe quam quasi ipsam veniam accusantium? Excepturi tenetur
+        dolores adipisci.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
