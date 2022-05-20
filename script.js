@@ -1,29 +1,46 @@
-"use strict";
-
-const factsNew = document.querySelector(".facts__new");
-const marschNew = document.querySelector(".marsch__new");
-const aviaNew = document.querySelector(".avia__new");
-const scrollRead = document.querySelector(".read__more");
-const mom = document.querySelector(".mom");
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
-const nav1 = document.getElementById("nav1");
-const nav2 = document.getElementById("nav2");
-const nav3 = document.getElementById("nav3");
-const maps = document.getElementById("map");
+const text = document.getElementById('text');
+const bus = document.querySelector('.bus');
+const eat = document.querySelector('.eat');
+const images = document.querySelectorAll('.transform');
+
+//Transform images
+
+images.forEach(img=> {
+    img.addEventListener('mouseover', function() {
+        img.classList.add('transforms');
+    })
+
+    img.addEventListener('mouseout', function() {
+        img.classList.remove('transforms');
+    })
+})
 
 
+//Scrolling
 
-scrollRead.addEventListener("click", function (e) {
-  e.preventDefault(e);
-  maps.scrollIntoView({ behavior: "smooth" });
-});
-
+btn1.addEventListener("click", function (e) {
+    e.preventDefault();
+    text.scrollIntoView({ behavior: "smooth" });
+  });
+  
+  btn2.addEventListener("click", function (e) {
+    e.preventDefault();
+    bus.scrollIntoView({ behavior: "smooth" });
+  });
+  
+  btn3.addEventListener("click", function (e) {
+    e.preventDefault();
+    eat.scrollIntoView({ behavior: "smooth" });
+  });
+  
 //Slider
 const slides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
+
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -109,30 +126,13 @@ document.addEventListener("keydown", function (e) {
   e.key === "ArrowRight" && nextSlide();
 });
 
-//Scrolling
-
-btn1.addEventListener("click", function (e) {
-  e.preventDefault();
-  nav1.scrollIntoView({ behavior: "smooth" });
-});
-
-btn2.addEventListener("click", function (e) {
-  e.preventDefault();
-  nav2.scrollIntoView({ behavior: "smooth" });
-});
-
-btn3.addEventListener("click", function (e) {
-  e.preventDefault();
-  nav3.scrollIntoView({ behavior: "smooth" });
-});
-
-const mapOptions = {
-  center: [17.385044, 78.486671],
-  zoom: 10,
-};
 
 //Add map
 
+const mapOptions = {
+    center: [17.385044, 78.486671],
+    zoom: 7,
+  };
 const map = L.map("map").setView([48.0350889, 9.2486652], 5.6);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -228,3 +228,4 @@ addCities(
   ],
   "green"
 );
+
